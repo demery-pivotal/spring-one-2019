@@ -1,6 +1,0 @@
-[submodule "geode"]
-	path = code/geode
-	url = ssh://git@github.com/demery-pivotal/geode
-[submodule "endpoint"]
-	path = code/endpoint
-	url = git@github.com:pivotal-cf/cloudcache-metrics-release.git
