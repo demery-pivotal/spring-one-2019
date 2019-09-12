@@ -22,5 +22,5 @@ scrape_configs:
     scheme: http
     static_configs:
     - targets:
-      - 'localhost:7070'
-      - 'localhost:8080'
+      - 'localhost:9001'
+      - 'localhost:9002'

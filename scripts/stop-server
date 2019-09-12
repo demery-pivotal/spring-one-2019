@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+gfsh stop server --dir ${SERVER_DIR}
