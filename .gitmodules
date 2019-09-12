@@ -1,0 +1,6 @@
+[submodule "geode"]
+	path = geode
+	url = ssh://git@github.com/demery-pivotal/geode
+[submodule "endpoint"]
+	path = endpoint
+	url = git@github.com:demery-pivotal/geode-prometheus-endpoint.git
