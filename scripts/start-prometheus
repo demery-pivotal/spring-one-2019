@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+log_file=prometheus.log
+out_file=prometheus.out
+prometheus --config.file=./config/prometheus.yml >${out_file} 2>${log_file} &
+
+echo "Prometheus metrics: http://localhost:9090/metrics"
+echo "Prometheus graphs : http://localhost:9090/graph"
