@@ -4,3 +4,6 @@
 [submodule "endpoint"]
 	path = endpoint
 	url = ssh://git@github.com/demery-pivotal/simple-metrics-endpoint.git
+[submodule "client"]
+	path = client
+	url = git@github.com:demery-pivotal/spring-one-2019-client.git
