@@ -3,4 +3,4 @@
 	url = ssh://git@github.com/demery-pivotal/geode
 [submodule "endpoint"]
 	path = endpoint
-	url = git@github.com:demery-pivotal/geode-prometheus-endpoint.git
+	url = ssh://git@github.com/demery-pivotal/simple-metrics-endpoint.git
