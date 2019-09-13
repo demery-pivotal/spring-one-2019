@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-gfsh start locator \
-  --name ${LOCATOR_NAME} \
-  --dir ${LOCATOR_DIR} \
-  --classpath=${ENDPOINT_JAR} \
-  --J=-Dprometheus.metrics.port=${LOCATOR_METRICS_PORT}

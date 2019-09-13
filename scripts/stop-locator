@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-gfsh stop locator --dir ${LOCATOR_DIR}

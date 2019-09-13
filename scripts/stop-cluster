@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+gfsh stop server --dir members/server1
+gfsh stop server --dir members/server2
+gfsh stop locator --dir members/locator
+

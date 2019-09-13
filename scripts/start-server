@@ -1,8 +1,0 @@
-#!/usr/bin/env bash 
-
-set -o xtrace
-set -o verbose
-
-start_server_command=$(echo "start server --name ${SERVER_NAME} --dir ${SERVER_DIR} --classpath=${ENDPOINT_JAR} --J=-Dprometheus.metrics.port=${SERVER_METRICS_PORT}")
-
-gfsh -e 'connect' -e "$start_server_command"

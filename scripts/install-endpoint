@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mkdir -p ${GEODE_HOME}/extensions
+cp ${ENDPOINT_JAR} ${GEODE_HOME}/extensions
