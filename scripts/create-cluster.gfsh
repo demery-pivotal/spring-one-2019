@@ -7,6 +7,6 @@ start server --name server3 --dir members/server3 --locators 127.0.0.1[10334] --
 list members
 
 create region --name my-replicate-region --type=REPLICATE
-create region --name my-partitioned-region --type=PARTITION --redundant-copies=1
+create region --name my-partitioned-region --type=PARTITION_REDUNDANT --redundant-copies=1 --recovery-delay=0 --startup-recovery-delay=0
 
 list regions
