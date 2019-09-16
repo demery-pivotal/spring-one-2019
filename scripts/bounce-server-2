@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-gfsh stop server --dir members/server2
-
-sleep 15
-
-gfsh -e connect -e "start server --name server2 --dir members/server2 --locators 127.0.0.1[10334] --server-port=0 --J=-Dprometheus.metrics.port=9002 --rebalance=true"
-
-

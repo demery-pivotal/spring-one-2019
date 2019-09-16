@@ -2,7 +2,6 @@ start locator --name locator --dir members/locator --bind-address 127.0.0.1 --J=
 
 start server --name server1 --dir members/server1 --locators 127.0.0.1[10334] --server-port=0 --J=-Dprometheus.metrics.port=9001
 start server --name server2 --dir members/server2 --locators 127.0.0.1[10334] --server-port=0 --J=-Dprometheus.metrics.port=9002
-start server --name server3 --dir members/server3 --locators 127.0.0.1[10334] --server-port=0 --J=-Dprometheus.metrics.port=9003
 
 list members
 

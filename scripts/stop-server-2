@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-gfsh stop server --dir members/server2
-

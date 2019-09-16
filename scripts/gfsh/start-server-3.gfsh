@@ -1,0 +1,4 @@
+connect
+start server --name=server3 --dir=members/server3 --locators 127.0.0.1[10334] --server-port=0 --J=-Dprometheus.metrics.port=9003 --rebalance=true
+
+
