@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+#####################################################################
+# Clean up any leftovers from previous run
+#####################################################################
+
+pkill prometheus
+rm -rf ${DIR}/data
+
+${DIR}/stop-cluster
+rm -rf ${DIR}/members
+
+#####################################################################
+# Build the components of the demo
+#####################################################################
+
+pushd ${DIR}/../geode
+./gradlew build -x test
+popd
+
+pushd ${DIR}/../endpoint
+./gradlew build
+popd
+
+${DIR}/install-endpoint
+
+pushd ${DIR}/../client
+./gradlew build
+popd
+
+#####################################################################
+# Run the demo scenario
+#####################################################################
+
+${DIR}/start-prometheus
+
+${DIR}/start-cluster
+
+sleep 30s
+
+pushd ${DIR}/../client
+./gradlew run &
+popd
+
+sleep 2m
+
+${DIR}/add-server
+
+sleep 2m
+
+${DIR}/bounce-server
+
+sleep 2m
+
+#####################################################################
+# Stop the cluster (but leave prometheus running)
+#####################################################################
+${DIR}/stop-cluster
+
