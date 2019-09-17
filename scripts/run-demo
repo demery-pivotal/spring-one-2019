@@ -7,10 +7,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 #####################################################################
 
 pkill prometheus
-rm -rf ${DIR}/data
+rm -rf ${DIR}/../data
 
 ${DIR}/stop-cluster
-rm -rf ${DIR}/members
+rm -rf ${DIR}/../members
 
 #####################################################################
 # Build the components of the demo
@@ -57,5 +57,6 @@ sleep 2m
 #####################################################################
 # Stop the cluster (but leave prometheus running)
 #####################################################################
+
 ${DIR}/stop-cluster
 
